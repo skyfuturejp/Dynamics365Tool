@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <style>
+        .lblcss {
+            font-family: "SegoeUI","Segoe UI";
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ff0000;
+            display: block;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var param = location.search.split("data=");
+            if (param.length > 0) {
+                var displayVal = decodeURIComponent(param[1]);
+                displayVal = displayVal.replace(/\\n/g, "\n");
+                document.getElementById("lableid").textContent = displayVal;
+            }
+        }
+    </script>
+    <meta charset="utf-8">
+    <meta>
+    <meta>
+</head>
+<body style="word-wrap: break-word;" dir="LTR" lang="ja-JP">
+    <div>
+        <div class="lblcss" id="lableid"></div>
+    </div>
+</body>
+</html>
